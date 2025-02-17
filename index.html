@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Body Language Scoring for Interviews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Body Language Scoring for Interviews</h1>
+    <p>Assessing confidence, engagement, and professionalism through non-verbal cues.</p>
+  </header>
+
+  <main>
+    <section id="demos">
+      <h2>Live Webcam Analysis</h2>
+      <p>Enable your webcam to start real-time body language analysis.</p>
+
+      <div id="liveView" class="videoView">
+        <button id="webcamButton" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">ENABLE WEBCAM</span>
+        </button>
+        <div class="video-container" id="videoContainer">
+          <video id="webcam" autoplay playsinline></video>
+          <canvas id="output_canvas" class="output_canvas"></canvas>
+        </div>
+      </div>
+
+      <div id="scores">
+        <div class="score-card">
+          <h3>Eye Contact</h3>
+          <p id="eye-contact-score">0%</p>
+        </div>
+        <div class="score-card">
+          <h3>Head Posture</h3>
+          <p id="head-posture-score">0%</p>
+        </div>
+        <div class="score-card">
+          <h3>Overall Score</h3>
+          <p id="overall-score">0%</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="script2.js"></script>
+</body>
+</html>

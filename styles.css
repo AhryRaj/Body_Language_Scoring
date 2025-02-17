@@ -1,0 +1,160 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #007f8b, #00b4cc);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007f8b;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Lower layer */
+}
+
+.output_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Top layer */
+  pointer-events: none; /* Allow interaction with video */
+}
+
+video,
+.output_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+/* Webcam Button */
+#webcamButton {
+  margin: 1rem 0;
+  background-color: #007f8b;
+  color: white;
+  font-size: 1rem;
+  padding: 0 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#webcamButton:hover {
+  background-color: #005f6b;
+}
+
+.mdc-button__label {
+  position: relative;
+  top: 1px;
+}
+
+/* Scores Section */
+#scores {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.score-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-card h3 {
+  font-size: 1.2rem;
+  color: #007f8b;
+  margin-bottom: 0.5rem;
+}
+
+.score-card p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #scores {
+    flex-direction: column;
+  }
+
+  .score-card {
+    margin-bottom: 1rem;
+  }
+}
